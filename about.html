@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<link rel="stylesheet" href="css/grid.css">
+	<link rel="stylesheet" href="css/about.css">
+</head>
+
+<body>
+	<div id="about">
+		<div id="aboutme">
+			<div id="myDIV">
+				<a href="index.html"><button class="btn">Home</button></a>
+				<a href="about.html"><button class="btn active">About</button></a>
+				<a href="works.html"><button class="btn">Works</button></a>
+				<a href="gallery.html"><button class="btn">Gallery</button></a>
+				<a href="contact.html"><button class="btn">Contact</button></a>
+			</div>
+			<div class="title col-1">About Me</div>
+			<div class="image col-5">about me</div>
+			<div class="text col-5">About Me</div>
+			<div class="nextbtn col-1">About Me</div>
+		</div>
+		<div id="software"></div>
+		<div id="hobby"></div>
+	</div>
+<!--	menu-->
+	<script>
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myDIV");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+</script>
+</body>
+</html>
